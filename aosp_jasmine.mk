@@ -25,12 +25,10 @@
 $(call inherit-product, device/xiaomi/jasmine/device.mk)
 
 # Inherit from Havoc custom product configuration
-$(call inherit-product, vendor/havoc/config/common.mk)
+TARGET_BOOT_ANIMATION_RES := 2140
+$(call inherit-product, vendor/aosp/common.mk)
 
 TARGET_VENDOR_PRODUCT_NAME := jasmine
-
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.havoc.maintainer=rcstar6696 
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="jasmine_sprout-user 9 PKQ1.180904.001 V10.0.2.0.PDIMIFJ release-keys"
@@ -41,6 +39,6 @@ BUILD_FINGERPRINT := "xiaomi/jasmine/jasmine_sprout:9/PKQ1.180904.001/V10.0.2.0.
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_PLATFORM := SDM660
-PRODUCT_NAME := havoc_jasmine
+PRODUCT_NAME := aosp_jasmine
 PRODUCT_DEVICE := jasmine
 PRODUCT_MODEL := MI A2
