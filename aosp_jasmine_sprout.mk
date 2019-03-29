@@ -40,3 +40,12 @@ PRODUCT_PLATFORM := SDM660
 PRODUCT_NAME := aosp_jasmine_sprout
 PRODUCT_DEVICE := jasmine_sprout
 PRODUCT_MODEL := MI A2
+
+# Set this flag in build script
+ifeq ($(CURRENT_BUILD_TYPE), gapps)
+# Use Gapps
+TARGET_SHIPS_SEPERATE_GAPPS_BUILD := true
+WITH_GAPPS := true
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
+endif
