@@ -28,6 +28,8 @@ $(call inherit-product, device/xiaomi/jasmine_sprout/device.mk)
 TARGET_BOOT_ANIMATION_RES := 2140
 $(call inherit-product, vendor/aosp/common.mk)
 
+EXTENDED_BUILD_TYPE := OFFICIAL
+
 TARGET_VENDOR_PRODUCT_NAME := jasmine_sprout
 
 # Device identifier
