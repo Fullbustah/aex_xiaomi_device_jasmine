@@ -1,0 +1,6 @@
+#
+# system.prop for sdm660
+#
+#
+persist.sys.exif.make=Xiaomi
+persist.sys.exif.model=Mi A2
