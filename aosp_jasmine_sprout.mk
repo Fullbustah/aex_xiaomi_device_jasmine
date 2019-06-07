@@ -34,7 +34,7 @@ EXTENDED_BUILD_TYPE := OFFICIAL
 TARGET_VENDOR_PRODUCT_NAME := jasmine_sprout
 
 # Device identifier
-PRODUCT_BRAND := Xiaomi
+PRODUCT_BRAND := xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_PLATFORM := SDM660
 PRODUCT_NAME := aosp_jasmine_sprout
@@ -49,3 +49,9 @@ WITH_GAPPS := true
 TARGET_GAPPS_ARCH := arm64
 IS_PHONE := true
 endif
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_DEVICE="jasmine_sprout" \
+    PRODUCT_NAME="jasmine"
+
+TARGET_VENDOR_PRODUCT_NAME := jasmine
