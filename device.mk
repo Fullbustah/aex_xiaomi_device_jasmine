@@ -104,6 +104,10 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_COPY_FILES += \
 	$(DEVICE_PATH)/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf
 
+#ShishuOTA
+    PRODUCT_PACKAGES += \
+        ShishuOTA
+
 # Update engine
 PRODUCT_PACKAGES += \
 	brillo_update_payload \

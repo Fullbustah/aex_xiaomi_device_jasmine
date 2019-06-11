@@ -25,11 +25,12 @@ BUILD_TWRP := true
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/jasmine_sprout/device.mk)
 
-# Inherit from Havoc custom product configuration
-$(call inherit-product, vendor/havoc/config/common.mk)
+# Inherit some common Bootleggers stuff.
+$(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
 
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.havoc.maintainer=rcstar6696
+DEVICE_MAINTAINERS := "Fullbustah"
+BOOTLEGGERS_BUILD_TYPE :="Shishufied"
+TARGET_PICK_BOOTANIMATION :="5,8,9"
 
 # Build Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
@@ -41,12 +42,8 @@ BUILD_FINGERPRINT := xiaomi/jasmine/jasmine_sprout:9/PKQ1.180904.001/V10.0.9.0.P
 PRODUCT_BRAND := xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_PLATFORM := SDM660
-PRODUCT_NAME := havoc_jasmine_sprout
+PRODUCT_NAME := bootleg_jasmine_sprout
 PRODUCT_DEVICE := jasmine_sprout
 PRODUCT_MODEL := Mi A2
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE="jasmine_sprout" \
-    PRODUCT_NAME="jasmine"
 
 TARGET_VENDOR_PRODUCT_NAME := jasmine
